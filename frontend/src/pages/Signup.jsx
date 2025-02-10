@@ -15,6 +15,7 @@ const Signup = () => {
     try {
       // Sending the registration request to the backend
       const response = await axios.post('http://localhost:3000/api/auth/signup', {  username, email ,password, });
+    //   const response = await axios.post('https://geo-maze.vercel.app/api/auth/signup', {  username, email ,password, });
       localStorage.setItem('token', response.data.token); 
       
       

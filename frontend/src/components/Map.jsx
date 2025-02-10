@@ -27,11 +27,11 @@ function LocationUpdater({ setUserPosition, roomId, socket, userName }) {
           roomId,
           latitude,
           longitude,
-          userId: socket.current.id, // Ensure this is unique
+          userId: socket.current.id,
           name: userName,
         });
 
-        map.setView([latitude, longitude], 15);
+        map.setView([latitude, longitude], 18); // Increased zoom for a closer view
       },
       (error) => console.error("Error fetching location:", error),
       { enableHighAccuracy: true }
@@ -78,7 +78,7 @@ function Map() {
   return (
     <MapContainer
       center={userPosition ? [userPosition.latitude, userPosition.longitude] : [20.5937, 78.9629]}
-      zoom={userPosition ? 15 : 5}
+      zoom={userPosition ? 18 : 6} // Increased default zoom level
       style={{ height: "100vh", width: "100%" }}
     >
       <TileLayer

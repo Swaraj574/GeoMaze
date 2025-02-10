@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import main from "../images/main.jpg"
 
 
 export default function Hero() {
@@ -15,7 +16,7 @@ export default function Hero() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="display-5 fw-bold text-dark mb-3">Stay Connected, Travel Safely</h1>
+          <h1 className="display-5 fw-bold text-dark mb-3">Travel Smart, Stay Connected and Stay Safe.</h1>
           <p className="lead text-secondary mb-4">
             Real-time location sharing and group coordination for travelers. Navigate unfamiliar places with confidence
             and stay safe on your adventures.
@@ -29,7 +30,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <img
-            src="/placeholder.svg"
+            src={main}
             alt="Travel group using TravelSafe app"
             className="img-fluid rounded shadow"
           />
